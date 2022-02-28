@@ -1,0 +1,107 @@
+﻿@model userViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Please Enter your information</h1>
+</div>
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<body class="text-center">
+    <form method="post" asp-action="displayBMI">
+        <div asp-validation-summary="All"></div>
+        <div class="form-group row">
+            <div class="col-sm-2"><label>First Name:</label></div>
+            <div class="col-sm-4">
+                <input type="text" asp-for="f"
+                       class="form-control" />
+            </div>
+            <div class="col">
+                <span asp-validation-for="f"
+                      class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-2"><label>Last Name:</label></div>
+            <div class="col-sm-4">
+                <input type="text" asp-for="l"
+                       class="form-control" />
+            </div>
+            <div class="col">
+                <span asp-validation-for="l"
+                      class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-2"><label>Gender:</label></div>
+            <div class="col-sm-4">
+                <input type="text" asp-for="g"
+                       class="form-control" />
+            </div>
+            <div class="col">
+                <span asp-validation-for="g"
+                      class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-2"><label>Birth Month:</label></div>
+            <div class="col-sm-4">
+                <input type="number" asp-for="m"
+                       class="form-control" />
+            </div>
+            <div class="col">
+                <span asp-validation-for="m"
+                      class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-2"><label>Birth Day:</label></div>
+            <div class="col-sm-4">
+                <input type="number" asp-for="d"
+                       class="form-control" />
+            </div>
+            <div class="col">
+                <span asp-validation-for="d"
+                      class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-2"><label>Birth Year:</label></div>
+            <div class="col-sm-4">
+                <input type="number" asp-for="y"
+                       class="form-control" />
+            </div>
+            <div class="col">
+                <span asp-validation-for="y"
+                      class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-2"><label>Hight (in inches):</label></div>
+            <div class="col-sm-4">
+                <input type="number" asp-for="h"
+                       class="form-control" />
+            </div>
+            <div class="col">
+                <span asp-validation-for="h"
+                      class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-2"><label>Weight (in pounds):</label></div>
+            <div class="col-sm-4">
+                <input type="number" asp-for="w"
+                       class="form-control" />
+            </div>
+            <div class="col">
+                <span asp-validation-for="w"
+                      class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-2 col-sm-4">
+                <button type="submit" class="btn btn-primary">Calculate BMI</button>
+            </div>
+        </div>
+    </form>
+</body>
